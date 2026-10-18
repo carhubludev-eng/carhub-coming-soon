@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Legal notice and company information for CarHub S.à r.l.-S., registered in Luxembourg.">
   <title>Legal Notice | CarHub</title>
-
   <link rel="icon" href="/favicon.png">
 
   <style>
@@ -21,7 +22,7 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
       min-height: 100vh;
@@ -37,6 +38,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
       margin-bottom: 56px;
     }
 
@@ -46,14 +48,19 @@
       mix-blend-mode: multiply;
     }
 
+    .lang {
+      display: flex;
+      gap: 16px;
+    }
+
     .lang a {
       color: var(--accent-dark);
       text-decoration: none;
       font-size: 14px;
       font-weight: 700;
-      margin-left: 16px;
     }
 
+    .lang a:hover,
     .lang a.active {
       text-decoration: underline;
     }
@@ -72,11 +79,10 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
-      opacity: 0.9;
     }
 
     .back:hover {
-      opacity: 1;
+      color: var(--accent-dark);
     }
 
     h1 {
@@ -99,71 +105,249 @@
       max-width: 760px;
     }
 
+    a {
+      color: var(--accent-dark);
+    }
+
+    .details {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .details-row {
+      display: grid;
+      grid-template-columns: minmax(180px, 34%) minmax(0, 1fr);
+      gap: 14px;
+      padding: 14px 20px;
+    }
+
+    .details-row + .details-row {
+      border-top: 1px solid var(--line);
+    }
+
+    .details dt {
+      color: var(--soft);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .details dd {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .permit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .permit {
+      background: #fbfcfa;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .permit strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .permit p {
+      margin: 8px 0 0;
+      font-size: 15px;
+    }
+
+    footer {
+      padding: 24px 8px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    footer p,
+    footer a {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 700px) {
-      body { padding: 18px; }
-      .nav { margin-bottom: 34px; }
-      .brand img { width: 78px; mix-blend-mode: multiply; }
-      .card { padding: 32px 22px; border-radius: 30px; }
-      h1 { font-size: 40px; }
+      body {
+        padding: 18px;
+      }
+
+      .nav {
+        margin-bottom: 34px;
+      }
+
+      .brand img {
+        width: 78px;
+      }
+
+      .card {
+        padding: 32px 22px;
+        border-radius: 30px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .details-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 13px 15px;
+      }
+
+      .permit-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
   <main class="page">
-    <nav class="nav">
-      <a class="brand" href="/">
+
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="CarHub homepage">
         <img src="/logo-transparent.png" alt="CarHub logo">
       </a>
 
-      <div class="lang">
-        <a href="/legal-notice/" class="active">EN</a>
+      <div class="lang" aria-label="Language options">
+        <a href="/legal-notice/" class="active" aria-current="page">EN</a>
         <a href="/de/impressum/">DE</a>
-        <a href="/fr/mentions-legales">FR</a>
+        <a href="/fr/mentions-legales/">FR</a>
       </div>
     </nav>
 
     <section class="card">
-      <a class="back" href="/">← Home</a>
+      <a class="back" href="/">&larr; Home</a>
 
       <h1>Legal Notice</h1>
 
-      <h2>Project status</h2>
+      <h2>1. Company information</h2>
+
+      <dl class="details">
+        <div class="details-row">
+          <dt>Company name</dt>
+          <dd>CarHub S.à r.l.-S.</dd>
+        </div>
+
+        <div class="details-row">
+          <dt>Legal form</dt>
+          <dd>Société à responsabilité limitée simplifiée (SARL-S)</dd>
+        </div>
+
+        <div class="details-row">
+          <dt>Registered office</dt>
+          <dd>11B Haaptstrooss, L-9457 Landscheid, Luxembourg</dd>
+        </div>
+
+        <div class="details-row">
+          <dt>Trade and Companies Register (RCS)</dt>
+          <dd>Luxembourg B312933</dd>
+        </div>
+
+        <div class="details-row">
+          <dt>Managing director</dt>
+          <dd>Joe Conor Bircumshaw</dd>
+        </div>
+
+        <div class="details-row">
+          <dt>Contact email</dt>
+          <dd>
+            <a href="mailto:contact@carhub.lu">contact@carhub.lu</a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2>2. Establishment authorisations</h2>
 
       <p>
-        CarHub is currently under development. This website serves as a preliminary informational coming soon page.
+        CarHub S.à r.l.-S. holds the following establishment authorisations,
+        issued by the Luxembourg Ministry of the Economy on 10 October 2026:
       </p>
 
-      <h2>Website responsibility</h2>
+      <div class="permit-grid">
+        <div class="permit">
+          <strong>No. 10199707 / 1</strong>
+          <p>Activités et services commerciaux</p>
+        </div>
+
+        <div class="permit">
+          <strong>No. 10199707 / 0</strong>
+          <p>Exploitant d'un atelier graphique</p>
+        </div>
+      </div>
+
+      <h2>3. Purpose and status of this website</h2>
 
       <p>
-        This website is currently operated by the founder of the CarHub project. Full company and legal details will be added once the business is officially established.
+        CarHub is developing a digital platform designed to connect motorists
+        with garages and automotive service providers in Luxembourg.
+        This public website presents the project and its planned services.
+        The platform is currently under development and in private testing.
       </p>
 
-      <h2>Contact</h2>
-
       <p>
-        contact@carhub.lu
+        Public service bookings, payments and user accounts are not currently
+        offered through this informational website.
       </p>
 
-      <h2>Purpose of the website</h2>
+      <h2>4. Website hosting</h2>
 
       <p>
-        This website is intended to present the CarHub project. No commercial bookings, payments or user accounts are currently available on this page.
+        The public website
+        <a href="https://www.carhub.lu/">www.carhub.lu</a>
+        is hosted using Vercel, provided by Vercel Inc.
       </p>
 
-      <h2>Hosting</h2>
+      <h2>5. Privacy</h2>
 
       <p>
-        This website is hosted by Vercel Inc., USA.
+        For information on how personal data is processed in connection
+        with this website, please see our
+        <a href="/privacy-policy/">Privacy Policy</a>.
       </p>
 
-      <h2>Temporary notice</h2>
+      <h2>6. Contact</h2>
 
       <p>
-        This legal notice is temporary and will be updated with complete company details once CarHub is officially launched.
+        For enquiries concerning this website or CarHub,
+        please contact us at
+        <a href="mailto:contact@carhub.lu">contact@carhub.lu</a>.
       </p>
     </section>
+
+    <footer>
+      <p>
+        &copy; 2026 CarHub S.à r.l.-S. &middot;
+        RCS B312933 &middot;
+        Authorisations 10199707/1 and 10199707/0
+      </p>
+
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="mailto:contact@carhub.lu">Contact</a>
+      </div>
+    </footer>
+
   </main>
 </body>
 </html>
